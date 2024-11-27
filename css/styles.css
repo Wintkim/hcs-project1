@@ -1,3 +1,189 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main-col: rgb(37, 38, 43);
+  --accent-main-col: rgb(147, 67, 95);
+  --text-bright: rgb(226, 228, 224);
+  --text-normal: rgb(136, 136, 144);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
 body {
-  background-color: aqua;
+  background-color: white;
+}
+.nav li {
+  margin-right: 35px; /* 각 항목 간 간격을 15px로 설정 */
+}
+
+/* 마지막 항목에 오른쪽 여백 제거 */
+.nav li:last-child {
+  margin-right: 0;
+}
+.img {
+  margin: 0;
+}
+
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Viewport height */
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율을 유지하며 영역 채우기 */
+  z-index: -1; /* 컨텐츠 뒤로 배치 */
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: left;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* 이미지보다 위에 배치 */
+  padding: 0 20px;
+}
+
+.container.marketing {
+  margin-top: 60px; /* 상단 여백 추가 */
+  margin-bottom: 30px;
+  text-align: center; /* 모든 내용 가운데 정렬 */
+}
+
+.container.marketing .row {
+  justify-content: center; /* Bootstrap flexbox로 중앙 정렬 */
+}
+
+.container.marketing img {
+  margin-bottom: 20px; /* 이미지 아래에 여백 추가 */
+}
+
+.container.marketing h2 {
+  margin-top: 10px; /* 제목 위에 약간의 여백 추가 */
+}
+
+.featurette-image {
+  object-fit: cover; /* 이미지 비율 유지하며 잘라내기 */
+  border-radius: 10px; /* 원하는 경우 둥근 모서리 추가 */
+}
+
+.featurette {
+  margin-top: 40px;
+  margin-bottom: 50px; /* 각 섹션 간 여백 */
+}
+
+.footer {
+  position: relative; /* 위치를 정상적인 흐름으로 변경 */
+  width: 100%;
+  background-color: var(--bg-main-col);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between; /* 각 섹션을 양쪽에 배치 */
+  flex-wrap: wrap;
+  bottom: 0;
+  left: 0;
+  font-family: "Poppins", sans-serif;
+  margin-top: auto; /* Footer를 페이지 하단에 위치시키기 위한 설정 */
+}
+
+.footer__section {
+  margin: 1rem 2rem;
+  min-width: 200px;
+}
+
+.footer__h2 {
+  color: var(--text-bright);
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.footer__h2::after {
+  content: "";
+  display: block;
+  margin-top: 0.5rem;
+  height: 3px;
+  width: 30%;
+  background-color: var(--accent-main-col);
+}
+
+.footer__li__a:hover {
+  color: var(--text-bright);
+}
+
+.footer__ul__socials {
+  display: flex;
+  justify-content: center; /* 아이콘들을 가운데 정렬 */
+  padding: 0;
+}
+
+.footer__ul__li__a__socials {
+  margin: 0.3rem;
+}
+
+.socials__svg {
+  width: 40px; /* 모든 아이콘 크기 일관성 있게 설정 */
+  height: 40px;
+  background-color: var(--text-normal);
+  border-radius: 50%;
+  padding: 0.4rem;
+  fill: var(--text-bright);
+}
+
+.socials__svg path {
+  fill: var(--text-bright);
+}
+
+.socials__svg:hover {
+  background-color: var(--text-bright);
+  fill: var(--text-normal);
+}
+
+.footer__li__a {
+  color: var(--text-normal);
+  text-decoration: none;
+  line-height: 1.8rem;
 }

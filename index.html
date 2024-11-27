@@ -4,7 +4,300 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header class="p-3 text-bg-dark">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <svg
+              class="bi me-2"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li>
+              <a href="/about.html" class="nav-link px-2 text-white">About</a>
+            </li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-bg-dark"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Login
+            </button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img
+        src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg"
+        alt="Hero Image"
+        class="hero-img"
+      />
+      <div class="hero-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover the best content here.</p>
+      </div>
+    </section>
+
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img
+              src="./kiel3.jpg"
+              alt="Description of Image 1"
+              class="bd-placeholder-img rounded-circle"
+              width="160"
+              height="160"
+            />
+         
+            <h4 class="fw-normal">SEOUL</h4>
+            <p>
+              Some representative placeholder content for the three columns of text below the carousel. This is the first column.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          </div>
+         
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              src="./kiel2.jpg"
+              alt="Description of Image 2"
+              class="bd-placeholder-img rounded-circle"
+              width="160"
+              height="160"
+            />
+            <h4 class="fw-normal">LONDON</h4>
+            <p>
+              Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          </div>
+        
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img
+              src="./kiel1.jpg"
+              alt="Description of Image 3"
+              class="bd-placeholder-img rounded-circle"
+              width="160"
+              height="160"
+            />
+            <h4 class="fw-normal">KIEL</h4>
+            <p>
+              And lastly this, the third column of representative placeholder content.
+            </p>
+            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+      </div>
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              First featurette heading.
+            </h2>
+            <p class="lead">
+              Some great placeholder content for the first featurette here.
+              Imagine some exciting prose here.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="./industry3.jpg" 
+              alt="Description of Image 1"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+          </div>
+        </div>
+        
+        <hr class="featurette-divider" />
+        
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Oh yeah, it’s that good.
+            </h2>
+            <p class="lead">
+              Another featurette? Of course. More placeholder content here to
+              give you an idea of how this layout would work with some actual
+              real-world content in place.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img
+            src="./industry2.jpg" 
+              alt="Description of Image 2"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+          </div>
+        </div>
+        
+        <hr class="featurette-divider" />
+        
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              And lastly, this one.
+        
+            </h2>
+            <p class="lead">
+              And yes, this is the last block of representative placeholder
+              content. Again, not really intended to be actually read, simply
+              here to give you a better view of what this would look like with
+              some actual content. Your content.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+            src="./industry1.jpg" 
+              alt="Description of Image 3"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+          </div>
+        </div>
+        
+        <hr class="featurette-divider" />
+
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+
+      <!-- FOOTER
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>
+          © 2017–2024 Company, Inc. · <a href="#">Privacy</a> ·
+          <a href="#">Terms</a>
+        </p>
+      </footer>
+    -->
+<footer class="footer">
+  <section class="footer__section">
+    <h2 class="footer__h2">Company</h2>
+    <ul class="footer__ul">
+      <li><a class="footer__li__a" href="">About Us</a></li>
+      <li><a class="footer__li__a" href="">Our Services</a></li>
+      <li><a class="footer__li__a" href="">Privacy Policy</a></li>
+      <li><a class="footer__li__a" href="">Affiliate Program</a></li>
+    </ul>
+  </section>
+  <section class="footer__section">
+    <h2 class="footer__h2">Get Help</h2>
+    <ul class="footer__ul">
+      <li><a class="footer__li__a" href="">FAQ</a></li>
+      <li><a class="footer__li__a" href="">Shipping</a></li>
+      <li><a class="footer__li__a" href="">Returns</a></li>
+      <li><a class="footer__li__a" href="">Order Status</a></li>
+      <li><a class="footer__li__a" href="">Payment Options</a></li>
+    </ul>
+  </section>
+  <section class="footer__section">
+    <h2 class="footer__h2">Online Shop</h2>
+    <ul class="footer__ul">
+      <li><a class="footer__li__a" href="">Watch</a></li>
+      <li><a class="footer__li__a" href="">Bag</a></li>
+      <li><a class="footer__li__a" href="">Shoes</a></li>
+      <li><a class="footer__li__a" href="">Dress</a></li>
+    </ul>
+  </section>
+  <section class="footer__section">
+    <h2 class="footer__h2">Follow Us</h2>
+    <ul class="footer__ul__socials">
+      <li><a class="footer__ul__li__a__socials" href="">
+        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="socials__svg" enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
+        <!-- facebook SVG -->
+      </a></li>
+      <li><a class="footer__ul__li__a__socials" href="">
+        <!-- bluesky SVG -->
+        <svg class="socials__svg" width="600" height="530" viewBox="0 0 600 530" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" />
+         </svg>
+      </a></li>
+      <li><a class="footer__ul__li__a__socials" href="">
+        <!-- instagram SVG -->
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg class="socials__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+        <g>
+          <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+            c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+          <circle cx="41.5" cy="16.4" r="2.9"/>
+          <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+            h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+            s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+            c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+        </g>
+        </svg>
+      </a></li>
+      <li><a class="footer__ul__li__a__socials" href="">
+        <!-- linkedIn SVG -->
+        <?xml version="1.0" ?><svg class="socials__svg" style="enable-background:new 0 0 100 100;" version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+          .st0{fill:#231F20;}
+          .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+          .st2{fill-rule:evenodd;clip-rule:evenodd;}
+        </style><g id="Layer_3"/><g id="Layer_1"><path d="M66.8,75.4v-22c0,0-1.2-4.6-5.6-4.4c-4.4,0.2-5.8,0.9-7.8,3.3v23.1H42.1V40.5h11.2v5.1c0,0,3.6-7.1,11.2-6.6   c6.9,0.5,12.1,4.7,13.2,13.9H78v22.5H66.8z M28.7,36c-3.7,0-6.7-3-6.7-6.8c0-3.7,3-6.8,6.7-6.8s6.7,3,6.7,6.8   C35.4,32.9,32.4,36,28.7,36z M34.3,75.4H23.1V40.5h11.2V75.4z" id="linkedin"/></g></svg>
+      </a></li>
+    </ul>
+  </section>
+</footer>
+    </main>
+  </body>
 </html>
