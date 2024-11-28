@@ -21,7 +21,9 @@
 
 body {
   background-color: white;
+  font-family: Arial, sans-serif;
 }
+
 .nav li {
   margin-right: 35px; /* 각 항목 간 간격을 15px로 설정 */
 }
@@ -48,16 +50,6 @@ body {
 
 .dropdown-toggle:not(:focus) {
   outline: 0;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
 }
 
 .hero {
@@ -89,40 +81,40 @@ body {
 }
 
 .container.marketing {
-  margin-top: 60px; /* 상단 여백 추가 */
+  margin-top: 60px;
   margin-bottom: 30px;
-  text-align: center; /* 모든 내용 가운데 정렬 */
+  text-align: center;
 }
 
 .container.marketing .row {
-  justify-content: center; /* Bootstrap flexbox로 중앙 정렬 */
+  justify-content: center;
 }
 
 .container.marketing img {
-  margin-bottom: 20px; /* 이미지 아래에 여백 추가 */
+  margin-bottom: 20px;
 }
 
 .container.marketing h2 {
-  margin-top: 10px; /* 제목 위에 약간의 여백 추가 */
+  margin-top: 10px;
 }
 
 .featurette-image {
   object-fit: cover; /* 이미지 비율 유지하며 잘라내기 */
-  border-radius: 10px; /* 원하는 경우 둥근 모서리 추가 */
+  border-radius: 10px;
 }
 
 .featurette {
   margin-top: 40px;
-  margin-bottom: 50px; /* 각 섹션 간 여백 */
+  margin-bottom: 50px;
 }
 
 .footer {
-  position: relative; /* 위치를 정상적인 흐름으로 변경 */
+  position: relative;
   width: 100%;
   background-color: var(--bg-main-col);
   padding: 2rem;
   display: flex;
-  justify-content: space-between; /* 각 섹션을 양쪽에 배치 */
+  justify-content: space-between;
   flex-wrap: wrap;
   bottom: 0;
   left: 0;
@@ -130,18 +122,26 @@ body {
   margin-top: auto; /* Footer를 페이지 하단에 위치시키기 위한 설정 */
 }
 
+.footer__ul {
+  padding: 0;
+  margin: 0;
+}
 .footer__section {
   margin: 1rem 2rem;
   min-width: 200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.footer__h2 {
+.footer__h4 {
   color: var(--text-bright);
   padding-bottom: 0.5rem;
   font-weight: 500;
+  margin: 0;
 }
 
-.footer__h2::after {
+.footer__h4::after {
   content: "";
   display: block;
   margin-top: 0.5rem;
@@ -156,7 +156,7 @@ body {
 
 .footer__ul__socials {
   display: flex;
-  justify-content: center; /* 아이콘들을 가운데 정렬 */
+  justify-content: center;
   padding: 0;
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 .socials__svg {
-  width: 40px; /* 모든 아이콘 크기 일관성 있게 설정 */
+  width: 40px;
   height: 40px;
   background-color: var(--text-normal);
   border-radius: 50%;
@@ -186,4 +186,9 @@ body {
   color: var(--text-normal);
   text-decoration: none;
   line-height: 1.8rem;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }
