@@ -1,7 +1,3 @@
-// THIS IS NOT MY CODE - used for teaching purposings on refactoring
-// Tutorial copied from:
-// https://www.w3schools.com/howto/howto_js_slideshow.asp
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -44,18 +40,14 @@ function showSlides(n) {
 
 var map = new maplibregl.Map({
   container: "map",
-  style: "https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json", // Style URL; see our documentation for more options
-  center: [6.942373, 50.332852], // Initial focus coordinate (long, lat)
-  zoom: 14,
+  style: "https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json", // 지도 스타일 URL
+  center: [6.942373, 50.332852], // 초기 중심 좌표 (경도, 위도)
+  zoom: 14, // 초기 줌 레벨
 });
 
-// Add zoom and rotation controls to the map.
-map.addControl(new maplibregl.NavigationControl());
+map.addControl(new maplibregl.NavigationControl()); // 네비게이션 컨트롤 추가
 
-// First, we define our marker locations. You can use whatever format you want when
-// working with custom markers, but we have chosen to use GeoJSON for this example, as
-// a lot of geospatial data comes in this form. If you have a lot of data, you may want to
-// put it in another file that is loaded separately.
+// 마커 컬렉션 정의
 var markerCollection = {
   type: "FeatureCollection",
   features: [
@@ -63,8 +55,6 @@ var markerCollection = {
       type: "Feature",
       geometry: {
         type: "Point",
-        // NOTE: in GeoJSON notation, LONGITUDE comes first. GeoJSON
-        // uses x, y coordinate notation
         coordinates: [6.940046, 50.333947],
       },
       properties: {
@@ -74,25 +64,52 @@ var markerCollection = {
   ],
 };
 
-// Next, we can add markers to the map
+// 각 마커 생성 및 지도에 추가
 markerCollection.features.forEach(function (point) {
-  // Since these are HTML markers, we create a DOM element first, which we will later
-  // pass to the Marker constructor.
   var elem = document.createElement("div");
   elem.className = "marker";
 
-  // Now, we construct a marker and set it's coordinates from the GeoJSON. Note the coordinate order.
   var marker = new maplibregl.Marker(elem);
   marker.setLngLat(point.geometry.coordinates);
 
-  // You can also create a popup that gets shown when you click on a marker. You can style this using
-  // CSS as well if you so desire. A minimal example is shown. The offset will depend on the height of your image.
   var popup = new maplibregl.Popup({ offset: 24, closeButton: false });
   popup.setHTML("<div>" + point.properties.title + "</div>");
 
-  // Set the marker's popup.
   marker.setPopup(popup);
-
-  // Finally, we add the marker to the map.
   marker.addTo(map);
 });
+
+const weatherAPIKey = "3d2340498dc50ebb779c60f179115883";
+
+async function fetchWeather() {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=Kiel&appid=${weatherAPIKey}&units=metric`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch weather data.");
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+async function updateWeatherInfo() {
+  const weatherData = await fetchWeather();
+  const weatherInfoEl = document.getElementById("weather-info");
+
+  if (weatherData) {
+    const { weather, main } = weatherData;
+    weatherInfoEl.innerHTML = `
+      <p><strong>Condition:</strong> ${weather[0].description}</p>
+      <p><strong>Temperature:</strong> ${main.temp}°C</p>
+      <p><strong>Humidity:</strong> ${main.humidity}%</p>
+    `;
+  } else {
+    weatherInfoEl.innerHTML = "<p>Failed to load weather data.</p>";
+  }
+}
+
+// 날씨 정보를 업데이트
+updateWeatherInfo();
