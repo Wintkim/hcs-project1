@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/FAQs.css" />
+    <script jrc="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <form class="c-form u-inline" method="get" action="">
+      <fieldset class="c-form__fieldset">
+        <legend class="c-form__title u-uppercase">SUGGEST</legend>
+
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="text"
+            name="name"
+            placeholder="Name"
+            value=""
+            required="required"
+          />
+          <label class="c-field__label u-uppercase" for="name">Name</label>
+        </div>
+
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            maxlength="255"
+            value=""
+            required="required"
+          />
+          <label class="c-field__label u-uppercase" for="email">Email</label>
+        </div>
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="text"
+            name="subject"
+            placeholder="What's up?"
+            value=""
+          />
+          <label class="c-field__label u-uppercase" for="subject"
+            >Subject</label
+          >
+        </div>
+
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="date"
+            name="date"
+            required="required"
+          />
+          <label class="c-field__label u-uppercase" for="date"
+            >Select Date</label
+          >
+        </div>
+
+        <div class="c-field">
+          <textarea
+            class="c-field__textarea"
+            name="msg"
+            rows="6"
+            cols="50"
+            placeholder="Ask me anything!"
+            required="required"
+          ></textarea>
+          <label class="c-field__label u-uppercase" for="msg">Message</label>
+        </div>
+        <div class="c-field">
+          <button onclick="alert('no worries, you can try again my friend-!');">Reset</button>
+          <button onclick="alert('Thank you for watching my Project-!');">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+    <script src="js/FAQs.js"></script>
+    <script>
+  </body>
+</html>
