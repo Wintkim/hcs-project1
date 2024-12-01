@@ -107,7 +107,10 @@ body {
   margin-top: 40px;
   margin-bottom: 50px;
 }
-
+h2,
+.lead {
+  margin: 50px;
+}
 .footer {
   position: relative;
   width: 100%;
