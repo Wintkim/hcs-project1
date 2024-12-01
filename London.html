@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/kiel.css" />
-    <script src="js/kiel.js" defer></script>
 
     <script
       type="text/javascript"
@@ -49,7 +48,7 @@
     <br />
 
     <!-- The dots/circles -->
-    <div style="text-align: center">
+    <div style="content-wrapper">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
@@ -88,15 +87,14 @@
     
 </p></div>
 
-<div class="container">
-  <div id="map" class="map"></div>
-  <div class="weather-section">
-    <h2>London Weather</h2>
-    <div id="weather-info">Loading weather data...</div>
-  </div>
+<div class="weather">
+	<h3>Weather in the city of <span id="city"></span></h3>
+	<div id="icon" class="icon"></div>
+	<p id="description"></p>
+	<p id="temperature"></p>
 </div>
 
 <div id="map"></div>
-
+<script src="js/kiel.js"></script>
   </body>
 </html>

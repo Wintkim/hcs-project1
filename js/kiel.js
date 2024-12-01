@@ -81,8 +81,8 @@ markerCollection.features.forEach(function (point) {
 
 const weatherAPIKey = "3d2340498dc50ebb779c60f179115883";
 
-async function fetchWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=Kiel&appid=${weatherAPIKey}&units=metric`;
+async function fetchWeather(city) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAPIKey}&units=metric`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -96,20 +96,30 @@ async function fetchWeather() {
 }
 
 async function updateWeatherInfo() {
-  const weatherData = await fetchWeather();
-  const weatherInfoEl = document.getElementById("weather-info");
+  const city = "Kiel"; // Replace with dynamic city if needed
+  const weatherData = await fetchWeather(city);
 
   if (weatherData) {
-    const { weather, main } = weatherData;
-    weatherInfoEl.innerHTML = `
-      <p><strong>Condition:</strong> ${weather[0].description}</p>
-      <p><strong>Temperature:</strong> ${main.temp}°C</p>
-      <p><strong>Humidity:</strong> ${main.humidity}%</p>
-    `;
+    const { weather, main, name } = weatherData;
+
+    document.getElementById("city").textContent = name;
+    document.getElementById(
+      "icon"
+    ).style.backgroundImage = `url(https://openweathermap.org/img/wn/${weather[0].icon}@2x.png)`;
+    document.getElementById(
+      "description"
+    ).textContent = `Condition: ${weather[0].description}`;
+    document.getElementById(
+      "temperature"
+    ).textContent = `Temperature: ${main.temp}°C`;
   } else {
-    weatherInfoEl.innerHTML = "<p>Failed to load weather data.</p>";
+    document.getElementById("city").textContent = "Unknown";
+    document.getElementById("icon").style.backgroundImage = "none";
+    document.getElementById("description").textContent =
+      "Failed to fetch weather data.";
+    document.getElementById("temperature").textContent = "";
   }
 }
 
-// 날씨 정보를 업데이트
+// Update weather info on load
 updateWeatherInfo();
